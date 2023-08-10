@@ -8,9 +8,10 @@
 </head>
 <body>
 
-<div class="row justify-content-center">
+<div class="row justify-content-center mt-5">
 <div class="col-xl-11">
 <form action="/coba" method="POST">
+<?= csrf_field() ?>
 <div class="row">
 <div class="col-xl-6">
 <label for="exampleInputEmail1" class="form-label">Email address</label>

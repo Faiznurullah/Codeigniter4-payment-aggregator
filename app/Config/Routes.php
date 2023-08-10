@@ -31,6 +31,7 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->post('/coba', 'Home::coba');
+$routes->post('/webhook', 'Home::webhook');
 
 /*
  * --------------------------------------------------------------------
