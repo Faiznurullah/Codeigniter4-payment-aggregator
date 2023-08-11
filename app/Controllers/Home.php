@@ -20,7 +20,7 @@ class Home extends BaseController
         $email = $this->request->getVar('email');
         
         
-        $apiKey = 'SANDBOX2BDE451B-7DE0-40C0-9876-848F3DFC904BXXXX'; // your api key
+        $apiKey = 'SANDBOX2BDE451B-7DE0-40C0-9876-848F3DFC904BX'; // your api key
         $va = '0000007878776654'; // your va
         $production = false; // set false to sandbox mode
         
@@ -109,8 +109,35 @@ class Home extends BaseController
            $sessionID = $this->request->getVar('sid');
 
            $payment = $Modeldata->getSessionId($sessionID);
+
+           $status = $this->request->getVar('status');
+
+           switch ($status) {
+            case 'berhasil':
+                $newStatus = 'paid';
+                break;
+            case 'gagal':
+                $newStatus = 'failed';
+                break;
+            case 'pending':
+                $newStatus = 'unpaid';
+                break;
+            case 'expired':
+                    $newStatus = 'expired';
+                    break;
+            case 'capture':
+                    $newStatus = 'unpaid';
+                    break;
+            case 'settlement':
+                 $newStatus = 'paid';
+                 break;
+            default:
+                $newStatus = 'unknown'; // Jika status tidak dikenali
+                break;
+        }
+
            $data = [
-               'status' => 'paid',
+               'status' => $newStatus,
                'updated_at' => date('Y-m-d H:i:s'),
            ];
          
