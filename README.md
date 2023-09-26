@@ -67,6 +67,12 @@ $ git checkout nama-payment-baru
 # Push dulu biar nanti ketika PR perubahannya kelihatan semua
 $ git push origin nama-payment-baru
 
+# membuat branch code untuk mengerjakan projectnya
+$ git branch code-nama-payment-baru
+
+# beralih ke branch tersebut 
+$ git checkout code-nama-payment-baru
+
 # Lalu jalankan aplikasi kalian dengan command dibawah
 $ php spark serve
 
@@ -79,8 +85,9 @@ $ git add .
 $ git commit -m "Pesan commit Anda di sini"
 
 # melakukan perubahan pada branch baru dan ingin membagikannya dengan repositori
-$ git push origin nama-payment-baru
+$ git push origin code-nama-payment-baru
 
+# Silahkan lakukan Pull Request dari Branch Sekarang code-nama-payment-baru ke branch nama-payment-baru
 
 ```
 
