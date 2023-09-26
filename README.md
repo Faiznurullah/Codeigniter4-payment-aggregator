@@ -1,62 +1,96 @@
-# CodeIgniter 4 Application Starter
+# Selamat Datang !!!
 
-## What is CodeIgniter?
+![Example of codeigniter4 integration with payment aggregator](https://github.com/Faiznurullah/Codeigniter4-payment-aggregator/assets/59213454/233511dc-ffab-4188-bdc5-d3c6c2ac04ff)
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+#### Berikut adalah contoh integrasi CodeIgniter 4 dengan beberapa payment aggregator Indonesia.
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+![GitHub issues](https://img.shields.io/github/issues/faiznurullah/sidalah?style=flat-square)
+![GitHub stars](https://img.shields.io/github/stars/faiznurullah/sidalah?style=flat-square)
+![GitHub forks](https://img.shields.io/github/forks/faiznurullah/sidalah?style=flat-square)
+![GitHub license](https://img.shields.io/github/license/faiznurullah/sidalah?style=flat-square)
+![Maintained](https://img.shields.io/badge/maintained%3F-no-red.svg?style=flat-square)
+![GitHub followers](https://img.shields.io/github/followers/faiznurullah.svg?style=flat-square&label=followers)
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+## ✨ Fitur Tersedia
+- Contoh integrasi payment aggregator dengan CodeIgniter 4
 
-The user guide corresponding to the latest version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
+## 🐱‍💻 Panduan Menjalankan & Install Aplikasi
+Untuk menjalankan aplikasi atau web ini, Anda harus menginstal XAMPP atau web server lainnya dan memiliki setidaknya satu web browser yang terinstal di komputer Anda.
 
-## Installation & updates
+```bash
+# Clone repository ini atau download di
+$ git clone https://github.com/Faiznurullah/Codeigniter4-payment-aggregator.git
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+# Kemudian jalankan command composer install, ini akan menginstall resources yang laravel butuhkan
+$ composer install
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+# Lakukan copy .env dengan cara ketik command seperti dibawah 
+$ cp .env.example .env
 
-## Setup
+# Migrasi database jika menggunakan database
+$ php spark migrate
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+# Integrasi Apps key payment aggregator
+- Ubah apps key payment aggregator
 
-## Important Change with index.php
+# Lalu jalankan aplikasi kalian dengan command dibawah
+$ php spark serve
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+# Selamat aplikasi dapat anda nikmati di local!
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+```
 
-**Please** read the user guide for a better explanation of how CI4 works!
 
-## Repository Management
+## 🤝 Kontribusi
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+Contributions, issues and feature requests sangat saya apresiasi karena aplikasi ini jauh dari kata sempurna. Jangan ragu untuk pull request dan membuat perubahan pada project ini.
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+Berikut adalah cara untuk ikut berkontribusi pada project ini:
 
-## Server Requirements
 
-PHP version 7.4 or higher is required, with the following extensions installed:
+```bash
+# Install Codeigniter 4
+$ composer create-project codeigniter4/appstarter project-name
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+# Inisialisasi Git terlebih dahulu
+$ git init
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+# Remote repository ini terlebih dahulu
+$ git remote add https://github.com/Faiznurullah/Codeigniter4-payment-aggregator.git
 
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+# membuat branch baru tanpa mengubah branch saat ini.
+$ git branch nama-payment-baru
+
+# beralih ke branch tersebut 
+$ git checkout nama-payment-baru
+
+# Push dulu biar nanti ketika PR perubahannya kelihatan semua
+$ git push origin nama-payment-baru
+
+# Lalu jalankan aplikasi kalian dengan command dibawah
+$ php spark serve
+
+# Silahkan lakukan integrasi payment yang belum tersedia di project ini
+
+# menambahkan perubahan yang telah Anda buat pada file lokal Anda ke dalam staging area
+$ git add .
+
+# membuat commit dengan pesan yang menjelaskan perubahan tersebut
+$ git commit -m "Pesan commit Anda di sini"
+
+# melakukan perubahan pada branch baru dan ingin membagikannya dengan repositori
+$ git push origin nama-payment-baru
+
+
+```
+
+
+## 📝 Lisensi
+
+- Dilisensikan di bawah [Lisensi MIT](https://opensource.org/licenses/MIT)
+
+---
+
+**Dibuat dengan ❤️ oleh semua kontributor**
+
+
